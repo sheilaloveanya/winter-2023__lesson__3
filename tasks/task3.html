@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<H1>Задача 3.</H1>
+	<p>
+       Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число
+      за 2 спроби.
+    </p>
+
+    <script>
+      let randomNumber = Math.floor(Math.random() * 5) + 1;
+      let guessCount = 0;
+
+      while (guessCount < 2) {
+        let guess = parseInt(prompt("Відгадайте число від 1 до"));
+
+        if (guess === randomNumber) {
+          document.write("<h4>Вітаю! Ви вгадали число.</h4>");
+          break;
+
+        } else {
+          document.write("<p>Ви не вгадали.</p>");
+         
+          guessCount++;
+        }
+      }
+
+      if (guessCount === 2) {
+        document.write("<p>У Вас закінчилися спроби.</p>");
+      }
+    </script>
+</body>
+</html>

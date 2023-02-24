@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<H1>Задача 5.</H1>
+	<p>
+		З клавіатури вводиться назва категорії водія <br>
+		(А-мотоцикл, В-легковий автомобіль, С-вантажний автомобіль). <br>
+		Вивести на екран назву транспортного засобу, яким він може керувати. 
+	</p>
+	
+	
+	<script>
+		// 1. Введення необхідних даних 
+		let userDriverCategory = prompt("Введіть категорію водійських прав латиницею: A/B/C/AB/BC/ABC", "AB");
+		let result;
+
+		// 2. Обчислення виразів (пошук результату) 
+			switch (userDriverCategory)        
+		{
+			case "A": result = "МОТОЦИКЛOМ";
+				break;
+			case "B": result = "ЛЕГКОВИМ АВТОМОБІЛЕМ";
+				break;
+			case "C": result = "ВАНТАЖНИМ АВТОМОБІЛЕМ";
+				break;
+			case "AB": result = "МОТОЦИКЛОМ і ЛЕГКОВИМ АВТОМОБІЛЕМ";
+				break;
+			case "BC": result = "ЛЕГКОВИМ  і ВАНТАЖНИМ АВТОМОБІЛЕМ";
+				break;
+			case "ABC": result = "МОТОЦИКЛОМ, ЛЕГКОВИМ і ВАНТАЖНИМ АВТОМОБІЛЕМ";
+				break;
+			default: result = "Ви ввели некоректне значення, спробуйте ще раз";
+				break;
+		}
+		// 3. Виведення результату
+		document.write(`
+		Ви можете керувати: ${result}. <br>
+		Щасливої догроги!
+		
+		`)
+
+	</script>
+</body>
+</html>
